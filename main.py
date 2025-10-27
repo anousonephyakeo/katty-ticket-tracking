@@ -15,7 +15,7 @@ import re
 # ============== CONFIGURATION ==============
 TICKET_URL = "https://www.viagogo.com/Concert-Tickets/Pop-Rock/Contemporary-Pop-Rock/Katy-Perry-Tickets/E-156452615?backUrl=%2FConcert-Tickets%2FPop-Rock%2FContemporary-Pop-Rock%2FKaty-Perry-Tickets&quantity=1&sections=&ticketClasses=&rows=&seats=&seatTypes=&listingQty="
 PRICE_THRESHOLD = 24000  # HUF
-CHECK_INTERVAL = 600 # 10 minutes in seconds
+CHECK_INTERVAL = 30 # 10 minutes in seconds
 
 # Email configuration
 SENDER_EMAIL = "pkans007x@gmail.com"
