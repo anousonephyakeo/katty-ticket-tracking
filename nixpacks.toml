@@ -1,14 +1,20 @@
 [phases.setup]
-nixPkgs = ["python312", "python312Packages.pip", "chromium", "chromedriver"]
+nixPkgs = [
+    "python312", 
+    "python312Packages.virtualenv",
+    "chromium", 
+    "chromedriver"
+]
 
 [phases.install]
 cmds = [
-    "pip install --upgrade pip",
-    "pip install -r requirements.txt"
+    "python -m venv /opt/venv",
+    ". /opt/venv/bin/activate && pip install --upgrade pip",
+    ". /opt/venv/bin/activate && pip install -r requirements.txt"
 ]
 
 [phases.build]
 cmds = ["echo 'Build complete'"]
 
 [start]
-cmd = "python main.py"
+cmd = ". /opt/venv/bin/activate && python main.py"
